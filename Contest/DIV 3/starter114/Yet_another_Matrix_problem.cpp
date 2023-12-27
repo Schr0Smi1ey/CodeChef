@@ -37,35 +37,6 @@ void solution(){
     else{
         swap(arr[0][2],arr[1][1]);
     }
-
-    
-
-    // int num = 1;
-    // for(int i=0;i<n;i++){
-    //     arr[0][i] = num;
-    //     num += 2;
-    // }
-    // for(int i=1;i<n;i++){
-    //     arr[i][0] = num;
-    //     num += 2;
-    // }
-    // int x = (((n*n)/2) + 1 - n - (n - 1))/ (n-1);
-    // for(int j = (n-x);j < n;j++){
-    //     for(int i = 1 ;i<n;i++){
-    //         if(num > (n*n)) break;
-    //         arr[j][i] = num;
-    //         num += 2;
-    //     }
-    // }
-    // num = 2;
-    // for(int i = 0 ;i<n-1;i++){
-    //     for(int j = 0;j<n;j++){
-    //         if(arr[i][j] == 0){
-    //             arr[i][j] = num;
-    //             num += 2;
-    //         }
-    //     }
-    // }
     for(int i = 0 ;i<n;i++){
         for(int j = 0;j<n;j++){
             cout << arr[i][j] << " ";
