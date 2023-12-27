@@ -15,8 +15,7 @@ const int N = 2e5 +5;
 
 void solution(){
     int x,y,z;cin >> x >> y >> z;
-    int total = (x*y);
-    cout << (z/(total*2)) << endl;
+    cout << (z/(x*y*2)) << endl;
 }
 
 int32_t main(){
