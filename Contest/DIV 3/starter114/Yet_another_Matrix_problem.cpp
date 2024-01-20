@@ -15,11 +15,9 @@ const int N = 2e5 +5;
 
 void solution(){
     int n;cin >> n;
-    if(n % 2 == 0){
-        if(n == 2) {
-            cout << -1 << endl;
-            return;
-        }
+    if(n == 2) {
+        cout << -1 << endl;
+        return;
     }
     int arr[n][n] ;
     fill_n((int*)arr,n*n,0);
