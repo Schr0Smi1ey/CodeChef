@@ -27,7 +27,7 @@ void solution() {
         sum += (a[i] + b[i]);
     }
     int i = 4,j = 4,cnt = 8;
-    while(i < n && j < m){
+    while(cnt != 11 && i < n && j < m){
         if(a[i] > b[j]){
             sum += a[i];
             i++;
