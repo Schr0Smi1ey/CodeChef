@@ -21,7 +21,7 @@ void solution() {
     sort(arr, arr + n);
     int ans = INF;
     ans = min(ans, abs(arr[n - 1] - arr[2])); // deleting both min
-    ans = min(ans, abs(arr[0] - arr[n - 2 - 1])); // deleting both max
+    ans = min(ans, abs(arr[0] - arr[n - 3])); // deleting both max
     ans = min(ans, abs(arr[n - 2] - arr[1])); // deleting current max and min
     cout << ans << endl;
 }

@@ -10,20 +10,14 @@ const int N = 2e5 + 5;
 int maxima(int a, int b, int c) {
     int diff = abs(a - b);
     if (c >= diff) {
-        a = b = max(a, b);
+        a = b = max(a, b) + ((c - diff) / 2);
         c -= diff;
-        a += (c / 2);
-        b += (c / 2);
         if(c & 1) {
             a++;
         }
     } 
     else {
-        if (a < b) {
-            a += c;
-        } else {
-            b += c;
-        }
+        (a < b) ? a += c: b += c;
     }
     return a * b;
 }
@@ -36,15 +30,9 @@ void solution() {
     vector<pair<int, pair<int, int>>> cnt(n, {0, {0, 0}});
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
-            if(v[i][j] == '0') {
-                cnt[j].second.first++;
-            }
-            else if(v[i][j] == '1') {
-                cnt[j].second.second++;
-            }
-            else {
-                cnt[j].first++;
-            }
+            cnt[j].second.first += (v[i][j] == '0');
+            cnt[j].second.second += (v[i][j] == '1');
+            cnt[j].first += (v[i][j] == '?');
         }
     }
     int ans = 0LL;

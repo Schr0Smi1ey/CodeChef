@@ -32,8 +32,7 @@ void solution() {
         }
         else {
             int a = one[r] - one[l - 1], b = two[r] - two[l - 1], c = three[r] - three[l - 1];
-            int halfLen = (m / 2);
-            if (max({a,b,c}) != halfLen) {
+            if (max({a,b,c}) != (m / 2)) {
                 cout << "No" << endl;
             }
             else {
